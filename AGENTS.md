@@ -53,14 +53,14 @@ Dependencies and assets use SPDX identifiers. An expression is allowed when ever
 
 # AGENTS.md: guide for AI agents and contributors
 
-MaterialCraft is an open-source, native **node-based procedural material designer**: a clean-room
+crocwork Material is an open-source, native **node-based procedural material designer**: a clean-room
 implementation of the workflow professional material artists know from industry-standard node
 graph tools, written in **Rust only** (no JavaScript or TypeScript). **No Tauri, Electron or
 webview shells:** the desktop app is native egui/eframe on wgpu, and the web build is the same Rust
 compiled to WebAssembly (trunk + wasm-bindgen). Never add Tauri (or any webview/JS UI framework) as
 a dependency, build step or packaging target.
 
-The product name is always written **MaterialCraft** (`{Function}Craft` in PascalCase, like its
+The product name is always written **crocwork Material** (`{Function}Craft` in PascalCase, like its
 siblings PhotoCraft, VectorCraft, FilmCraft, LightCraft, PdfCraft, EffectCraft, DesignCraft,
 TextureCraft) in user-facing text: UI, window titles, About, installers, release names, docs prose.
 Machine names stay lowercase: crates (`materialcraft-*`), binaries, file names, ids
@@ -114,7 +114,7 @@ the engine.
 
 ### Never name the reference product (absolutely essential)
 
-- The repository never names the commercial product MaterialCraft is modeled on, nor its vendor,
+- The repository never names the commercial product crocwork Material is modeled on, nor its vendor,
   in code, comments, docs, commit messages, test names, file names or UI text. Say "the reference
   app", "the professional node-based material workflow" or describe the feature itself.
 - Notes that name it may live only in the gitignored `plan/` folder.
@@ -127,34 +127,34 @@ the engine.
   presets, sample graphs, HDR environments, UI icons). Not as reference files in the repo either.
 - Every image or icon must be **open source, public domain, Creative Commons (CC0/CC-BY), or
   original** (made by a contributor who has the right to license it). Prefer generating content in
-  code: MaterialCraft's noises, patterns, sample materials, environments, library previews and
+  code: crocwork Material's noises, patterns, sample materials, environments, library previews and
   template thumbnails are all procedural.
 - **Every bundled asset gets a row in [`ATTRIBUTION.md`](ATTRIBUTION.md)** (path, title, author,
   source, license) **in the same change that adds it**, plus its license file next to it when the
   license requires one. Assets compiled in through dependencies (icon fonts, default fonts) get a
   row too. No row, no merge.
-- Demo images and README screenshots show MaterialCraft rendering original procedural content
+- Demo images and README screenshots show crocwork Material rendering original procedural content
   only. Never personal photos.
-- The ArtCraft logos in `docs/brand/` are not open source (`docs/brand/LICENSE-brand.txt`).
+- The crocwork logos in `docs/brand/` are not open source (`docs/brand/LICENSE-brand.txt`).
 - Fonts live in [storytold/craft-fonts](https://github.com/storytold/craft-fonts); never commit font
   files here.
 
 ### Clean room
 
-MaterialCraft is an independent, clean-room implementation of a node-based procedural material
+crocwork Material is an independent, clean-room implementation of a node-based procedural material
 workflow. Work from public documentation, general domain knowledge and public algorithms (Perlin
 and simplex gradient noise, Worley/cellular noise, fractal sums, Gaussian and box blurs,
 Felzenszwalb–Huttenlocher distance transforms, Sobel/central-difference normals, reoriented normal
 mapping, HSL, levels, monotone cubic curves, W3C blend modes, GGX/Smith/Schlick PBR, split-sum IBL,
 ACES fitted tone mapping). Never copy proprietary code, shaders, node implementations or presets.
 SBS packages are the main project format (issue #49): `crates/formats/src/sbs/` reads and writes
-them with MaterialCraft's own code, written from the format's public documentation and sample
-files, never from another implementation. Always describe MaterialCraft as a clean-room
+them with crocwork Material's own code, written from the format's public documentation and sample
+files, never from another implementation. Always describe crocwork Material as a clean-room
 implementation, in code, docs and commits.
 
 ### Never crash (outranks feature work)
 
-People trust MaterialCraft with hours of work. A malformed package, a hostile command or MCP
+People trust crocwork Material with hours of work. A malformed package, a hostile command or MCP
 parameter, an odd keystroke or a full disk must produce an error the user or agent can act on,
 never a panic.
 
@@ -203,7 +203,7 @@ never a panic.
 
 1. `ROADMAP.md` → **Current focus** and the parity table.
 2. `docs/gaps.md` → the ranked list of shortfalls.
-3. Render snapshots of MaterialCraft and fix the biggest visible gaps in the workflow.
+3. Render snapshots of crocwork Material and fix the biggest visible gaps in the workflow.
 4. `log/devlog.md` (local) → the "Still open" bullets of recent entries.
 
 ## 5. Before you finish a task

@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft-automation"
-description = "MaterialCraft automation: MCP server (rmcp), headless JSON-lines RPC and a bridge to the running app"
+description = "crocwork Material automation: MCP server (rmcp), headless JSON-lines RPC and a bridge to the running app"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

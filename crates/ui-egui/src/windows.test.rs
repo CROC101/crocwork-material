@@ -135,7 +135,7 @@ fn project_dialogs_offer_separate_formats_and_import_filters_show_full_names() {
     use super::{package_filters, resource_filters};
     let saved = package_filters(false, false);
 
-    assert_eq!(saved, vec![("SBS XML Package (*.sbs)", &["sbs"][..]), ("MaterialCraft Project (*.mcraft)", &["mcraft"][..])]);
+    assert_eq!(saved, vec![("SBS XML Package (*.sbs)", &["sbs"][..]), ("crocwork Material Project (*.mcraft)", &["mcraft"][..])]);
     assert_eq!(package_filters(false, true)[0], saved[1]);
 
     let opened = package_filters(true, false);

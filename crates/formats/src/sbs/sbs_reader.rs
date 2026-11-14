@@ -524,7 +524,7 @@ impl<'text> SbsReader<'text, '_> {
                 Some(value) => {
                     node.params.insert(id.to_string(), value);
                 }
-                None => self.warnings.add(format!("`{}`: parameter `{id}` has a value type MaterialCraft can't read yet; kept the default", node.def)),
+                None => self.warnings.add(format!("`{}`: parameter `{id}` has a value type crocwork Material can't read yet; kept the default", node.def)),
             }
             return;
         }

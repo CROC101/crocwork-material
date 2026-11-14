@@ -38,7 +38,7 @@ pub const CATEGORIES: &[(&str, &[&str])] = &[
     ("Values", &["Constant"]),
 ];
 
-/// Older layouts name categories MaterialCraft has renamed: (old, current)
+/// Older layouts name categories crocwork Material has renamed: (old, current)
 const RENAMED: &[(&str, &str)] = &[("SDF functions", "MCF functions")];
 
 /// Words that place a material in a sub-category when its layout frame names only the top level
@@ -241,12 +241,12 @@ fn resolve(placement: &LibraryPlacement, dependencies: &BTreeMap<String, Arc<Pac
         }
         LayoutItem::Atomic { filter, node: None } => {
             let item = LibraryItem::Node { def: filter.clone() };
-            entry(format!("atomic:{filter}"), &humanize(filter), category, "", item, Some(format!("The atomic `{filter}` node is not in MaterialCraft yet")))
+            entry(format!("atomic:{filter}"), &humanize(filter), category, "", item, Some(format!("The atomic `{filter}` node is not in crocwork Material yet")))
         }
         LayoutItem::Operation(operation) => {
             let definition = materialcraft_nodes::function::FUNCTIONS.iter().find(|definition| definition.id == operation);
             let label = definition.map_or_else(|| humanize(operation), |definition| definition.label.to_string());
-            let missing = definition.is_none().then(|| format!("The `{operation}` function node is not in MaterialCraft yet"));
+            let missing = definition.is_none().then(|| format!("The `{operation}` function node is not in crocwork Material yet"));
             entry(format!("function:{operation}"), &label, category, "", LibraryItem::Operation { operation: operation.clone() }, missing)
         }
         LayoutItem::Instance { package, graph, .. } | LayoutItem::FunctionInstance { package, graph } => {
@@ -255,7 +255,7 @@ fn resolve(placement: &LibraryPlacement, dependencies: &BTreeMap<String, Arc<Pac
             let source = source.filter(|source| source.function.is_some() == function);
             let label = source.map_or_else(|| humanize(graph), |source| source.display_name().to_string());
             let description = source.map(|source| source.attributes.description.clone()).unwrap_or_default();
-            let missing = source.is_none().then(|| format!("Not in MaterialCraft yet: needs {graph} from {package}"));
+            let missing = source.is_none().then(|| format!("Not in crocwork Material yet: needs {graph} from {package}"));
             let item = if function {
                 LibraryItem::FunctionInstance { package: package.clone(), graph: graph.clone() }
             } else {
@@ -266,7 +266,7 @@ fn resolve(placement: &LibraryPlacement, dependencies: &BTreeMap<String, Arc<Pac
             out.warning = source
                 .and_then(|source| source.function.as_ref())
                 .filter(|function| function.output.is_none() || function.nodes.iter().any(|node| node.missing.is_some()))
-                .map(|_| "This function uses nodes MaterialCraft does not have yet".to_string());
+                .map(|_| "This function uses nodes crocwork Material does not have yet".to_string());
             out
         }
 
@@ -277,7 +277,7 @@ fn resolve(placement: &LibraryPlacement, dependencies: &BTreeMap<String, Arc<Pac
         }
         LayoutItem::Bitmap { resource } => {
             let name = resource.rsplit('/').next().unwrap_or(resource);
-            let missing = Some(format!("Not in MaterialCraft yet: the {} image is not bundled", humanize(name)));
+            let missing = Some(format!("Not in crocwork Material yet: the {} image is not bundled", humanize(name)));
             entry(format!("bitmap:{resource}"), &humanize(name), category, "", LibraryItem::Bitmap { resource: resource.clone() }, missing)
         }
     })

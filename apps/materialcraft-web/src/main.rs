@@ -1,4 +1,4 @@
-//! MaterialCraft in the browser.
+//! crocwork Material in the browser.
 //!
 //! Runs the same [`materialcraft_ui_egui::MaterialCraftApp`] as the desktop app through eframe's web
 //! runner (wgpu: WebGPU where available, WebGL2 otherwise). Build with `trunk build --release`

@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft-ui-egui"
-description = "MaterialCraft's egui shell: docks, graph editor, library, 2D and 3D views, properties"
+description = "crocwork Material's egui shell: docks, graph editor, library, 2D and 3D views, properties"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

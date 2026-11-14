@@ -1,4 +1,4 @@
-# Hosting MaterialCraft for the web
+# Hosting crocwork Material for the web
 
 `materialcraft-web-<version>.zip` (from the GitHub release, or `packaging/web/package.sh`) holds a
 static site in `materialcraft-web-<version>/`:
@@ -59,7 +59,7 @@ Local test: `python3 -m http.server 8765` inside the folder, then open http://lo
 ```html
 <iframe
   src="https://example.com/materialcraft/"
-  title="MaterialCraft procedural material designer"
+  title="crocwork Material procedural material designer"
   style="width: 100%; height: 720px; border: 0;"
   allow="fullscreen; clipboard-read; clipboard-write"
   allowfullscreen>
@@ -76,7 +76,7 @@ Local test: `python3 -m http.server 8765` inside the folder, then open http://lo
 
 ## Renderer selection and fallback flags
 
-MaterialCraft renders with wgpu. It uses **WebGPU** when the browser has it and falls back to
+crocwork Material renders with wgpu. It uses **WebGPU** when the browser has it and falls back to
 **WebGL2** on its own. URL query flags override this, and they work on the iframe `src` too:
 
 | Flag | Effect |

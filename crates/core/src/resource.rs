@@ -13,7 +13,7 @@ pub struct Resource {
     /// Unavailable external asset retained for repair on a later load
     #[serde(default, skip_serializing_if = "String::is_empty")]
     pub source: String,
-    /// Original bytes, saved beside native SBS or inside a MaterialCraft archive.
+    /// Original bytes, saved beside native SBS or inside a crocwork Material archive.
     #[serde(skip)]
     pub bytes: ResourceBytes,
 }

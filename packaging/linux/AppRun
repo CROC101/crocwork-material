@@ -1,5 +1,5 @@
 #!/bin/sh
-# MaterialCraft AppImage entry point (packaging/linux/AppRun; installed by package.sh).
+# crocwork Material AppImage entry point (packaging/linux/AppRun; installed by package.sh).
 #
 # On Wayland the compositor resolves a window's dock icon by taking the window's
 # app_id (ai.storyteller.materialcraft) and looking up an installed .desktop file.

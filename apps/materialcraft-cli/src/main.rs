@@ -1,4 +1,4 @@
-//! Headless MaterialCraft command line: inspect, script, cook, export and render packages, and serve agents over MCP or JSON lines. Never opens a window
+//! Headless crocwork Material command line: inspect, script, cook, export and render packages, and serve agents over MCP or JSON lines. Never opens a window
 #![forbid(unsafe_code)]
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 
@@ -9,7 +9,7 @@ use materialcraft_automation::{AuthorizedWorkspace, BridgeClient, Filesystem, He
 use serde_json::{Value, json};
 
 const USAGE: &str = "\
-materialcraft-cli: headless MaterialCraft
+materialcraft-cli: headless crocwork Material
 
 USAGE:
   materialcraft-cli --version

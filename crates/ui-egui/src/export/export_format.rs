@@ -3,11 +3,11 @@
 pub struct ExportFormat {
     pub extension: &'static str,
     pub label: &'static str,
-    /// MaterialCraft can write it today
+    /// crocwork Material can write it today
     pub available: bool,
 }
 
-/// Formats listed before MaterialCraft can write them, so their exporter can be connected later
+/// Formats listed before crocwork Material can write them, so their exporter can be connected later
 const PLANNED: &[(&str, &str)] = &[("dds", "DirectDraw Surface")];
 
 impl ExportFormat {

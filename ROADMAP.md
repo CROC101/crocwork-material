@@ -1,4 +1,4 @@
-# MaterialCraft roadmap
+# crocwork Material roadmap
 
 **Current focus (2026-11-08):** native primitive editing, reusable SBS functions and interoperable save/load.
 

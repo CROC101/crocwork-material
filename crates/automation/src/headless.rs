@@ -128,7 +128,7 @@ impl Headless {
         Ok(self.inspect())
     }
 
-    /// Save SBS with adjacent resources, or an independent MaterialCraft archive.
+    /// Save SBS with adjacent resources, or an independent crocwork Material archive.
     pub fn save(&mut self, path: Option<&str>) -> Result<Value, AutomationError> {
         let path = match path {
             Some(p) => file_cmds::package_path(p),

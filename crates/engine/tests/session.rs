@@ -157,7 +157,7 @@ fn native_sbs_is_the_default_save_format() {
     assert_eq!(run(&mut session, "file.save", json!({}))["path"], json!(saved));
 }
 
-/// Saving an SBS file another program wrote must not overwrite it: MaterialCraft can't write back what it couldn't read
+/// Saving an SBS file another program wrote must not overwrite it: crocwork Material can't write back what it couldn't read
 #[test]
 fn saving_an_sbs_file_from_another_program_needs_a_new_name() {
     let dir = TempDir::new("sbs-theirs");
@@ -171,7 +171,7 @@ fn saving_an_sbs_file_from_another_program_needs_a_new_name() {
     assert!(execute(&mut s, "file.save", &json!({})).is_err());
     assert_eq!(std::fs::read_to_string(&theirs).unwrap(), xml, "the original is untouched");
 
-    // Saved under a new name it becomes a MaterialCraft file, which saves in place from then on
+    // Saved under a new name it becomes a crocwork Material file, which saves in place from then on
     let mine = run(&mut s, "file.save", json!({"path": dir.file("mine.sbs")}))["path"].as_str().unwrap().to_string();
     run(&mut s, "file.open", json!({"path": mine}));
     assert_eq!(run(&mut s, "file.save", json!({}))["path"], json!(mine));

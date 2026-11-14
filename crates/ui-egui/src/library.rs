@@ -1,7 +1,7 @@
 //! The library: a category tree on the left (Favorites, then the library's categories and
 //! sub-categories), the matching entries as preview tiles (or a list) on the right, with search and
 //! filters. Drag an entry into the graph, or double-click it to add it. Entries the open graph
-//! can't take, and library nodes MaterialCraft doesn't have yet, are dimmed.
+//! can't take, and library nodes crocwork Material doesn't have yet, are dimmed.
 
 use std::sync::Arc;
 
@@ -20,7 +20,7 @@ pub(crate) use library_target::LibraryTarget;
 
 /// The category key of the Favorites row
 pub(crate) const FAVORITES: &str = "@favorites";
-/// Function entries that need more nodes than MaterialCraft has are shown in this color
+/// Function entries that need more nodes than crocwork Material has are shown in this color
 const WARNING: Color32 = Color32::from_rgb(255, 90, 180);
 
 /// Choose the icon for a known category or fall back to a folder.
@@ -148,7 +148,7 @@ fn filter_menu(app: &mut MaterialCraftApp, ui: &mut Ui) {
     let response = crate::widgets::icon_button(ui, icon::FUNNEL, tr("Filter"), filtered, 22.0);
     egui::Popup::menu(&response).show(|ui| {
         ui.set_min_width(240.0);
-        ui.checkbox(&mut app.ui.library_show_missing, tr("Show nodes not in MaterialCraft yet"));
+        ui.checkbox(&mut app.ui.library_show_missing, tr("Show nodes not in crocwork Material yet"));
         ui.checkbox(&mut app.ui.library_show_other, tr("Show nodes for other graph types"));
     });
 }

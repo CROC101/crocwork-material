@@ -13,10 +13,10 @@ pub struct LibraryEntry {
     #[serde(flatten)]
     pub item: LibraryItem,
     pub canvas: LibraryCanvas,
-    /// Why the entry can't be added yet (the package it needs is not in MaterialCraft)
+    /// Why the entry can't be added yet (the package it needs is not in crocwork Material)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub missing: Option<String>,
-    /// It can be added, but is incomplete (it uses operations MaterialCraft lacks)
+    /// It can be added, but is incomplete (it uses operations crocwork Material lacks)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub warning: Option<String>,
 }

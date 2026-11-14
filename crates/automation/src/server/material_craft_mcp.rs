@@ -271,7 +271,7 @@ impl MaterialCraftMcp {
 #[tool_handler(
     router = self.tool_router,
     name = "materialcraft",
-    instructions = "MaterialCraft procedural material designer. A package holds graphs of nodes; each graph's output nodes \
+    instructions = "crocwork Material procedural material designer. A package holds graphs of nodes; each graph's output nodes \
         (usages baseColor, normal, roughness, metallic, height, ambientOcclusion) make a PBR material. Start with graph_new \
         (templates: empty, pbr, atomics) or package_open, browse nodes with library_list, build with node_add / node_connect \
         / node_param (or command_run/command_batch for anything else: command_list), check your work with session_inspect and \

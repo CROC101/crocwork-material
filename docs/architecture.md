@@ -2,7 +2,7 @@
 
 > **Last reviewed:** 2026-11-05 · **Last updated:** 2026-11-05 · **Change:** evaluator and editor organization · **Target:** the professional node-based material workflow
 
-MaterialCraft is a Cargo workspace of small crates in strict layers (`cargo xtask layers` enforces
+crocwork Material is a Cargo workspace of small crates in strict layers (`cargo xtask layers` enforces
 them). Everything below the UI is plain Rust with no UI toolkit and builds for
 `wasm32-unknown-unknown`.
 
@@ -276,7 +276,7 @@ MIT OR Apache-2.0 `dds` decoder; GIF and ASCII/binary PGM use `image`. GIF loads
 DDS loads its first surface at the largest mip level. Each bitmap format has its own picker filter,
 and vector import offers SVG only. Both pickers include All formats, restricted to their supported
 extensions, and descriptive names with extension patterns. Open offers SBS XML Package and
-MaterialCraft Project plus All formats; Save As offers those two formats separately.
+crocwork Material Project plus All formats; Save As offers those two formats separately.
 
 The browser downloads `.mcraft` directly. SBS downloads use a transport ZIP containing the named
 SBS and its adjacent resources; extract it to work with the native files. Both forms can be opened

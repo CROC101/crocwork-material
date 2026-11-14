@@ -15,7 +15,7 @@ pub(super) fn report_placeholders(pkg: &Package, warnings: &mut Warnings) {
 
         for (name, count) in counts {
             let times = if count > 1 { format!(" ×{count}") } else { String::new() };
-            warnings.add(format!("graph `{}`: missing node `{name}`{times} is not in MaterialCraft's library yet; kept as a placeholder", graph.name));
+            warnings.add(format!("graph `{}`: missing node `{name}`{times} is not in crocwork Material's library yet; kept as a placeholder", graph.name));
         }
     }
 }

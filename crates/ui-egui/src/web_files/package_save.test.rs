@@ -229,7 +229,7 @@ fn browser_save_dialog_snapshot() {
     let directory = std::path::PathBuf::from(std::env::var_os("MC_SNAPSHOT_DIR").unwrap());
     std::fs::create_dir_all(&directory).unwrap();
     harness.render().unwrap().save(directory.join("browser-save-package.png")).unwrap();
-    harness.get_by_label("MaterialCraft Project (*.mcraft)").click();
+    harness.get_by_label("crocwork Material Project (*.mcraft)").click();
     harness.run();
     harness.render().unwrap().save(directory.join("browser-save-project.png")).unwrap();
 }

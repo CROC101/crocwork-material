@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft-formats"
-description = "MaterialCraft file formats: native SBS packages, bitmap import, texture export"
+description = "crocwork Material file formats: native SBS packages, bitmap import, texture export"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -1,7 +1,7 @@
 # Attribution
 
 Every bundled non-code asset in this repository, with its author, source and license. The rule:
-**each asset gets a row here in the same change that adds it.** MaterialCraft's own code and
+**each asset gets a row here in the same change that adds it.** crocwork Material's own code and
 original assets are MIT OR Apache-2.0 (see [`LICENSE-MIT`](LICENSE-MIT),
 [`LICENSE-APACHE`](LICENSE-APACHE) and [`NOTICE`](NOTICE)); third-party assets must be permissively
 licensed and keep their license file next to them. No asset from any commercial product (icons,
@@ -9,13 +9,13 @@ images, materials, sample graphs, presets, environments) may ever be added.
 
 | Path | Title | Author | Source | License |
 |---|---|---|---|---|
-| `assets/app-icon/materialcraft.svg` | App icon (engraved rhino), master vector traced at 2048 px | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/materialcraft-small.svg` | App icon (engraved rhino), lighter vector traced at 1024 px | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/materialcraft-1024.png` | App icon (engraved rhino), 1024 px | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/materialcraft.ico` | App icon (engraved rhino), Windows (16-256 px) | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/materialcraft.icns` | App icon (engraved rhino), macOS (16-1024 px) | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/hicolor/{16x16,24x24,32x32,48x48,64x64,128x128,256x256,512x512}/apps/ai.storyteller.materialcraft.png` | App icon (engraved rhino), hicolor theme PNGs | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
-| `assets/app-icon/hicolor/scalable/apps/ai.storyteller.materialcraft.svg` | App icon (engraved rhino), hicolor scalable (copy of `materialcraft-small.svg`) | Project owner (ArtCraft team) | Original artwork made for MaterialCraft, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/materialcraft.svg` | App icon (engraved rhino), master vector traced at 2048 px | Project owner (crocwork team) | Original artwork made for crocwork Material, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/materialcraft-small.svg` | App icon (engraved rhino), lighter vector traced at 1024 px | Project owner (crocwork team) | Original artwork made for crocwork Material, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/materialcraft-1024.png` | App icon (engraved rhino), 1024 px | Project owner (crocwork team) | Original artwork made for crocwork Material, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/materialcraft.ico` | App icon (engraved rhino), Windows (16-256 px) | Project owner (crocwork team) | Original artwork made for crocwork Material, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/materialcraft.icns` | App icon (engraved rhino), macOS (16-1024 px) | Project owner (crocwork team) | Original artwork made for crocwork Material, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/hicolor/{16x16,24x24,32x32,48x48,64x64,128x128,256x256,512x512}/apps/ai.storyteller.materialcraft.png` | App icon (engraved rhino), hicolor theme PNGs | Project owner (crocwork team) | Original artwork made for crocwork Material, rendered by `packaging/icons.sh` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
+| `assets/app-icon/hicolor/scalable/apps/ai.storyteller.materialcraft.svg` | App icon (engraved rhino), hicolor scalable (copy of `materialcraft-small.svg`) | Project owner (crocwork team) | Original artwork made for crocwork Material, vectorised with craftrules `vectorize_tile.py` | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) |
 | `assets/app-icon/LICENSE.txt`, `assets/app-icon/README.md` | App icon licence and notes | MaterialCraft contributors | original | MIT OR Apache-2.0 |
 | `assets/hdr/spiaggia_di_mondello_1k.exr` | Spiaggia di Mondello (1K EXR HDRI) | Andreas Mischok | [Poly Haven](https://polyhaven.com/a/spiaggia_di_mondello) | CC0-1.0 ([license](assets/hdr/LICENSE.txt)) |
 | `assets/hdr/monochrome_studio_02_1k.exr` | Monochrome Studio 02 (1K EXR HDRI) | Grzegorz Wronkowski | [Poly Haven](https://polyhaven.com/a/monochrome_studio_02) | CC0-1.0 ([license](assets/hdr/LICENSE.txt)) |
@@ -30,7 +30,7 @@ images, materials, sample graphs, presets, environments) may ever be added.
 | `docs/images/materialcraft-alpha-channel.png` | Docs screenshot: the 3D view's alpha channel view | MaterialCraft contributors | Offscreen render of MaterialCraft's UI (`crates/ui-egui/tests/snapshot.rs`) | MIT OR Apache-2.0 |
 | `docs/images/materialcraft-materials.png` | README render: eight sample materials on spheres | MaterialCraft contributors | `materialcraft-cli render --scene sphere --full --hq` of the templates, eight renders in a grid | MIT OR Apache-2.0 |
 | `docs/images/materialcraft-levels-editor.png` | Docs screenshot: the Levels editor with the input histogram | MaterialCraft contributors | Offscreen render of MaterialCraft's UI (`crates/ui-egui/tests/snapshot.rs`) | MIT OR Apache-2.0 |
-| `docs/brand/artcraft-*.svg`, `docs/brand/artcraft-*.png` | ArtCraft logo and mark | ArtCraft Team | storytold/craftrules `assets/brand/` | ArtCraft brand terms, not open source ([`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt)) |
+| `docs/brand/artcraft-*.svg`, `docs/brand/artcraft-*.png` | crocwork logo and mark | crocwork Team | storytold/craftrules `assets/brand/` | crocwork brand terms, not open source ([`docs/brand/LICENSE-brand.txt`](docs/brand/LICENSE-brand.txt)) |
 | `crates/nodes/src/atomic/text.rs` (`GLYPHS`) | Single-stroke vector font of the Text node (A–Z, a–z, 0–9, punctuation) | MaterialCraft contributors | Original, designed as stroke data in code | MIT OR Apache-2.0 |
 
 ## Third-party assets compiled into the binary

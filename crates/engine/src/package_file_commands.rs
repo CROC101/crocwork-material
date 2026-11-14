@@ -20,7 +20,7 @@ pub(crate) fn specs() -> Vec<CommandSpec> {
             "Save a copy as...",
             [],
             None,
-            "{path} writes an SBS or MaterialCraft copy without changing the current path or saved state",
+            "{path} writes an SBS or crocwork Material copy without changing the current path or saved state",
             has_package,
             save_copy
         ),

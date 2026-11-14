@@ -27,7 +27,7 @@ pub(crate) fn specs() -> Vec<CommandSpec> {
             "Open...",
             ["File"],
             Some("Ctrl+O"),
-            "{path} opens an SBS or MaterialCraft package; returns `warnings` and `path` (null when unsupported content requires Save As)",
+            "{path} opens an SBS or crocwork Material package; returns `warnings` and `path` (null when unsupported content requires Save As)",
             always,
             open
         ),

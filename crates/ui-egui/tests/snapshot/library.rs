@@ -73,7 +73,7 @@ fn library_tree_shows_every_category_and_adds_what_the_graph_takes() {
     assert_eq!(graph.nodes.len(), before + 1);
     assert_eq!(graph.nodes.last().unwrap().def, "blur");
 
-    // Categories MaterialCraft has no nodes for yet say so
+    // Categories crocwork Material has no nodes for yet say so
     harness.get(tree("Texture generators")).click();
     settle(&mut harness, 3);
     harness.get(tree("Noises")).click();

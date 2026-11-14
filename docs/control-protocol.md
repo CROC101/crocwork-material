@@ -2,7 +2,7 @@
 
 > **Last reviewed:** 2026-11-02 · **Last updated:** 2026-11-03 · **Change:** minor (`material_export` MCP tool) · **Target:** the professional node-based material workflow
 
-Agents drive MaterialCraft three ways, all dispatching the same engine commands:
+Agents drive crocwork Material three ways, all dispatching the same engine commands:
 
 1. **MCP** (`materialcraft-cli mcp`): headless (an in-process session, files only below
    `--read-root` / `--write-root`, also spelled `--automation-read-root` /
@@ -23,7 +23,7 @@ Agents drive MaterialCraft three ways, all dispatching the same engine commands:
    engine-command authority, including host file access.
    Set `MATERIALCRAFT_NO_PREFS=1` for scripted runs so the user's layout is left alone.
 
-Every SBS save writes MaterialCraft's workspace release version to `updaterVersion`, including
+Every SBS save writes crocwork Material's workspace release version to `updaterVersion`, including
 when resaving a file from an older release. `formatVersion` identifies the SBS schema separately.
 
 ## Methods
@@ -118,7 +118,7 @@ Types: `move`, `down`, `up`, `click`, `doubleClick`, `drag`, `scroll`, `key` (eg
 | `view.2d` / `view.3d` | which node the 2D view shows, channel, tiling, histogram; scene, environment, camera, tiling, `heightScale` (how far the height output raises the mesh, in mesh radii) and `heightLevel` (the height that stays on the surface; 0 = the relief rises out of it), `normalYFlip` (interpret DirectX normal maps; default false/OpenGL), `transparency` (see through where the alpha is below one: the opacity output, else the base color's alpha), `alphaView` (show the alpha channel) |
 | `view.3d.loadMesh` | `{path}` shows an OBJ, glTF or GLB mesh (scene `custom`) |
 | `library.list` | `{filter?, category?}`: every node with ports and parameters |
-| `library.tree` | `{filter?, category? (Top or Top/Sub), canvas? (material\|function\|pattern)}`: the Library panel's category tree and its entries. Each entry has `id`, `label`, `category`, `type` (`node`, `comment`, `frame`, `pin`, `instance`, `operation`, `functionInstance`, `pattern`, `bitmap`), the `canvas` that takes it (`any` for shared graph items), `missing` when MaterialCraft lacks the library package it needs, and `warning` when it can be added but is incomplete |
+| `library.tree` | `{filter?, category? (Top or Top/Sub), canvas? (material\|function\|pattern)}`: the Library panel's category tree and its entries. Each entry has `id`, `label`, `category`, `type` (`node`, `comment`, `frame`, `pin`, `instance`, `operation`, `functionInstance`, `pattern`, `bitmap`), the `canvas` that takes it (`any` for shared graph items), `missing` when crocwork Material lacks the library package it needs, and `warning` when it can be added but is incomplete |
 | `library.add` | `{entry, at?, snapToGrid?, function?: FunctionGraphTarget, pattern?: owner node id}`: add a `library.tree` entry to the open graph (function entries to a Function canvas; FX-Map nodes use `graph.pattern.edit`). Entries with `missing` refuse with the reason |
 | `library.reload` | `{}`: read the SBS library folder again |
 | `graph.cook` | `{full?, graph?: index}`: cook now and return per-node timings and errors; another material graph of the package cooks at full size into the cache |
@@ -367,7 +367,7 @@ expose unrestricted engine file paths.
 Bitmap Color space selects sRGB or Linear. `graph.input.bind` accepts `linear: true` for normal,
 height and other data maps. Input preview bindings persist in native SBS graph options with the
 `materialcraft.previewImage.` and `materialcraft.previewLinear.` prefixes; these options describe
-MaterialCraft editor previews and do not establish external application interoperability.
+crocwork Material editor previews and do not establish external application interoperability.
 
 ### Shared graph items and classification metadata
 

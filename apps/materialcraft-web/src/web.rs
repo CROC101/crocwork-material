@@ -26,9 +26,9 @@ pub fn start() {
             match result {
                 Ok(()) => el.remove(),
                 Err(e) => {
-                    log::error!("MaterialCraft failed to start: {e}");
+                    log::error!("crocwork Material failed to start: {e}");
                     el.set_text_content(Some(&format!(
-                        "MaterialCraft failed to start: {e}. It needs a browser with WebGPU (current Chrome, Edge or Safari) or at least WebGL2."
+                        "crocwork Material failed to start: {e}. It needs a browser with WebGPU (current Chrome, Edge or Safari) or at least WebGL2."
                     )));
                 }
             }

@@ -118,7 +118,7 @@ pub(super) fn definition() -> NodeDefinition {
         .any_in("background", "Background")
         .boolean("color_mode", "Color output", false)
         .color("background", "Background color", [0.0, 0.0, 0.0, 1.0])
-        .text("text", "Text", "MaterialCraft")
+        .text("text", "Text", "crocwork Material")
         .text("fontdata", "Font reference", "")
         .float("fontsize", "Font size", 0.09, 0.0, 1.0)
         .float2("position", "Position", [0.0; 2], -1.0, 1.0)

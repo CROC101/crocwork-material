@@ -145,7 +145,7 @@ pub struct Session {
     pub history_prefs: crate::HistoryPrefs,
     pub modified: bool,
     pub log: Vec<String>,
-    /// What the last opened SBS package held that MaterialCraft couldn't read; empty after a clean open.
+    /// What the last opened SBS package held that crocwork Material couldn't read; empty after a clean open.
     pub load_warnings: Vec<String>,
     pub clipboard: Option<Clip>,
     pub embedded_clipboard: Option<crate::EmbeddedClipboard>,

@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=MaterialCraft
+Name=crocwork Material
 GenericName=Procedural Material Designer
 Comment=Design procedural PBR materials with node graphs
 Exec=materialcraft %F

@@ -72,7 +72,7 @@ impl Accent {
     }
 
     /// (accent, accent_strong) on dark panels and on light ones; the strong one fills buttons
-    /// with white lettering. Cyan is MaterialCraft's own; the others are VectorCraft's.
+    /// with white lettering. Cyan is crocwork Material's own; the others are VectorCraft's.
     pub(crate) fn colors(self, dark: bool) -> (Color32, Color32) {
         let (a, strong) = match (self, dark) {
             // The app icon's teal (#178a9c, assets/app-icon/materialcraft.svg).

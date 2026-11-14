@@ -218,17 +218,17 @@ fn preferences(app: &mut MaterialCraftApp, ctx: &egui::Context) {
 
 fn about(app: &mut MaterialCraftApp, ctx: &egui::Context) {
     let mut open = true;
-    modal(ctx, "about", tr("About MaterialCraft"), &mut open, vec2(400.0, 260.0), |ui| {
+    modal(ctx, "about", tr("About crocwork Material"), &mut open, vec2(400.0, 260.0), |ui| {
         let tk = Tokens::get(ui.ctx());
         ui.vertical_centered(|ui| {
-            ui.label(RichText::new("MaterialCraft").size(22.0).strong().color(tk.accent));
+            ui.label(RichText::new("crocwork Material").size(22.0).strong().color(tk.accent));
             ui.label(format!("{} {}", tr("Version"), materialcraft_engine::VERSION));
             ui.add_space(6.0);
             ui.label(tr("Node-based procedural materials, built in pure Rust."));
-            ui.label(tr("An open-source Crafting App by the ArtCraft team and community."));
+            ui.label(tr("An open-source Crafting App by the crocwork team and community."));
             ui.add_space(6.0);
-            ui.hyperlink_to("getartcraft.com/apps/materialcraft", "https://getartcraft.com/apps/materialcraft");
-            ui.hyperlink_to("discord.gg/artcraft", "https://discord.gg/artcraft");
+            ui.hyperlink_to("getartcraft.com/apps/materialcraft", "https://github.com/CROC101/crocwork-material");
+            ui.hyperlink_to("discord.gg/artcraft", "https://github.com/CROC101/crocwork-material");
             ui.add_space(6.0);
             ui.label(RichText::new("MIT OR Apache-2.0").size(11.0).color(tk.text_dim));
         });
@@ -291,15 +291,15 @@ fn home(app: &mut MaterialCraftApp, ctx: &egui::Context) {
                     crate::menus::invoke(app, ui.ctx(), "file.open");
                 }
                 ui.add_space(16.0);
-                ui.hyperlink_to(tr("Documentation"), "https://github.com/storytold/materialcraft#readme");
-                ui.hyperlink_to(tr("Community (Discord)"), "https://discord.gg/artcraft");
-                ui.hyperlink_to("getartcraft.com", "https://getartcraft.com/apps/materialcraft");
+                ui.hyperlink_to(tr("Documentation"), "https://github.com/CROC101/crocwork-material#readme");
+                ui.hyperlink_to(tr("Community (Discord)"), "https://github.com/CROC101/crocwork-material");
+                ui.hyperlink_to("getartcraft.com", "https://github.com/CROC101/crocwork-material");
                 ui.add_space(16.0);
                 ui.checkbox(&mut app.ui.prefs.show_home, tr("Show at startup"));
             });
             ui.separator();
             ui.vertical(|ui| {
-                ui.label(RichText::new(tr("Welcome to MaterialCraft")).size(18.0).strong().color(tk.text_strong));
+                ui.label(RichText::new(tr("Welcome to crocwork Material")).size(18.0).strong().color(tk.text_strong));
                 ui.label(
                     RichText::new(tr(
                         "Build tileable materials from noises, patterns and filters, see them live in 2D and 3D, and export the maps for any engine.",
@@ -376,7 +376,7 @@ pub fn console(app: &mut MaterialCraftApp, ui: &mut Ui) {
             ui.label(console_line(format!("node {}: {error}", id.0), tk.danger));
         }
         if placeholders > 0 {
-            let text = format!("{placeholders} {}", tr("placeholder node(s) stand in for nodes MaterialCraft doesn't have yet (see the warnings above)"));
+            let text = format!("{placeholders} {}", tr("placeholder node(s) stand in for nodes crocwork Material doesn't have yet (see the warnings above)"));
             ui.label(console_line(text, tk.warning));
         }
     });
@@ -434,7 +434,7 @@ pub fn function_summary(app: &mut MaterialCraftApp, ui: &mut Ui, node: NodeId, p
 pub const OPEN_EXTS: &[&str] = &["sbs", "mcraft"];
 
 pub(crate) fn package_filters(open: bool, archive: bool) -> Vec<(&'static str, &'static [&'static str])> {
-    let mut filters: Vec<(&str, &[&str])> = vec![("SBS XML Package (*.sbs)", &["sbs"]), ("MaterialCraft Project (*.mcraft)", &["mcraft"])];
+    let mut filters: Vec<(&str, &[&str])> = vec![("SBS XML Package (*.sbs)", &["sbs"]), ("crocwork Material Project (*.mcraft)", &["mcraft"])];
     if archive {
         filters.reverse();
     }
@@ -496,7 +496,7 @@ pub(crate) fn import_resource_into(app: &mut MaterialCraftApp, ctx: &egui::Conte
     crate::web_files::import_resource(ctx, app.session.document_id, vector, folder);
 }
 
-/// After a package opened with warnings (an SBS file using nodes MaterialCraft lacks, say), bring the Console forward
+/// After a package opened with warnings (an SBS file using nodes crocwork Material lacks, say), bring the Console forward
 pub fn after_open(app: &mut MaterialCraftApp) {
     let warning_count = app.session.load_warnings.len();
     if warning_count > 0 {

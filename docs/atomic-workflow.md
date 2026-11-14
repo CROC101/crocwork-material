@@ -1,6 +1,6 @@
 # Primitive editing and native SBS
 
-MaterialCraft is a clean-room implementation. The Rust catalog contains only native primitives
+crocwork Material is a clean-room implementation. The Rust catalog contains only native primitives
 and graph input/output items. SBS library nodes belong in SBS graphs; their former Rust
 implementations have been removed.
 
@@ -121,7 +121,7 @@ pins by one shared offset, with one undo step. Resizing changes only the frame b
 
 New graph creation offers **Graph** and **Function Graph**. Function Graphs are package items with
 a flat operation menu, editable constants, typed native operations, wiring and a designated output
-node. They save as native SBS `<function>` items and reopen in MaterialCraft. Calling other SBS
+node. They save as native SBS `<function>` items and reopen in crocwork Material. Calling other SBS
 function graphs remains outside this change. The reference application's ability to reopen the
 saved files still needs external verification.
 

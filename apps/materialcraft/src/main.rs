@@ -1,4 +1,4 @@
-//! MaterialCraft desktop app
+//! crocwork Material desktop app
 //! Usage: `materialcraft [package.sbs] [--control <port>] [--empty] [--version]`
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 #![forbid(unsafe_code)]
@@ -22,9 +22,9 @@ fn version() -> String {
     let short = sha.get(..7).unwrap_or(sha);
     let date = env!("MATERIALCRAFT_BUILD_DATE");
     match (short.is_empty(), date.is_empty()) {
-        (true, true) => format!("MaterialCraft {}", materialcraft_engine::VERSION),
-        (true, false) => format!("MaterialCraft {} ({date})", materialcraft_engine::VERSION),
-        _ => format!("MaterialCraft {} ({short} {date})", materialcraft_engine::VERSION),
+        (true, true) => format!("crocwork Material {}", materialcraft_engine::VERSION),
+        (true, false) => format!("crocwork Material {} ({date})", materialcraft_engine::VERSION),
+        _ => format!("crocwork Material {} ({short} {date})", materialcraft_engine::VERSION),
     }
 }
 
@@ -104,7 +104,7 @@ fn main() {
     let session = initial_session(&args);
     let window_frame = craft_window::Choice::probe(craft_window::Prefix::new("MATERIALCRAFT")).into_frame();
     let mut viewport = craft_window::decorate(
-        egui::ViewportBuilder::default().with_title("MaterialCraft").with_inner_size(DEFAULT_SIZE).with_min_inner_size(MIN_SIZE),
+        egui::ViewportBuilder::default().with_title("crocwork Material").with_inner_size(DEFAULT_SIZE).with_min_inner_size(MIN_SIZE),
         &window_frame,
     );
     if let Some(i) = icon() {
@@ -117,14 +117,14 @@ fn main() {
     let startup_update_check = checks_for_updates_at_start(control, persistence_path.is_some());
     let options = eframe::NativeOptions { viewport, renderer: eframe::Renderer::Wgpu, persistence_path, ..Default::default() };
     let r = eframe::run_native(
-        "MaterialCraft",
+        "crocwork Material",
         options,
         Box::new(move |cc| {
             let mut app = MaterialCraftApp::new(cc, session);
             app.window_layout = window_frame.layout().cloned();
             // Called from the creator: winit installs its default menu before this runs. On error winit's menu stays, whose Quit does not ask
             #[cfg(target_os = "macos")]
-            if let Err(error) = craft_menu::mac::install_app_menu(&cc.egui_ctx, "MaterialCraft") {
+            if let Err(error) = craft_menu::mac::install_app_menu(&cc.egui_ctx, "crocwork Material") {
                 log::warn!("could not install the app menu: {error}");
             }
             app.set_startup_update_check(startup_update_check);

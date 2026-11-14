@@ -1,7 +1,7 @@
-# Releasing MaterialCraft
+# Releasing crocwork Material
 
 The recipe is craftrules' [release playbook](release-playbook.md); this page covers what is
-specific to MaterialCraft. The pipeline is [`.github/workflows/release.yml`](../.github/workflows/release.yml).
+specific to crocwork Material. The pipeline is [`.github/workflows/release.yml`](../.github/workflows/release.yml).
 
 ## Release manager checklist
 
@@ -74,7 +74,7 @@ gh run view $RID -R storytold/materialcraft --log | grep -E "status: Accepted|st
 - Every job is green, and no `::warning::` names a missing secret (that platform shipped unsigned:
   fix the secret and re-run, don't publish).
 - macOS: two `The staple and validate action worked!` lines (app and DMG) and `status: Accepted`.
-- The draft `MaterialCraft v<version>` exists, targets the commit you pushed, and carries every
+- The draft `crocwork Material v<version>` exists, targets the commit you pushed, and carries every
   file in the table below plus `SHA256SUMS.txt`.
 - Download, check and launch at least one artifact per platform:
   - Windows: `signtool verify /pa /v materialcraft-<v>-windows-x64.msi` succeeds and names the
@@ -108,19 +108,19 @@ All file names are `materialcraft-<version>-<platform>-<arch>.<ext>`, written to
 | Web | `materialcraft-web-<version>.zip` (trunk, `wasm-release` profile; hosting notes in `packaging/web/README.md`) | `packaging/web/package.sh` |
 
 Every desktop package ships both binaries, `materialcraft` and `materialcraft-cli` (on macOS the CLI
-is its own zip next to the DMG). Release builds pass the craft-fonts reference (`CRAFT_FONTS_REF` in `release.yml`); MaterialCraft
+is its own zip next to the DMG). Release builds pass the craft-fonts reference (`CRAFT_FONTS_REF` in `release.yml`); crocwork Material
 does not embed CJK fonts yet (see docs/localization-parity.md). The packaging
 scripts smoke-test `materialcraft-cli --version`, and the Linux job also runs the AppImage with
 `--version`, so both binaries must print their version and exit without opening a window.
 
-## MaterialCraft-specific values
+## crocwork Material-specific values
 
 | What | Value |
 |---|---|
 | Bundle / app id | `ai.storyteller.materialcraft` |
 | Package format | `.mcraft`, MIME `application/x-materialcraft`, UTI `ai.storyteller.materialcraft.package` (owned). Declared in `materialcraft.wxs`, `Info.plist.in`, the `.desktop` file, `mime.xml` and the AppStream metainfo: keep all five in step |
 | WiX UpgradeCode | `89DE105E-B6C8-4261-ADBE-25BCFA3A0C91`, never change it |
-| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.MaterialCraft.yml` (release bundle: `…MaterialCraft.bundle.yml`) |
+| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.crocwork Material.yml` (release bundle: `…crocwork Material.bundle.yml`) |
 | macOS minimum | 11.0 (`LSMinimumSystemVersion`, `MACOSX_DEPLOYMENT_TARGET`) |
 
 ## Version and build info in the binaries
@@ -134,7 +134,7 @@ scripts smoke-test `materialcraft-cli --version`, and the Linux job also runs th
   or `SOURCE_DATE_EPOCH`'s for reproducible builds.
 
 On Windows targets it also embeds `assets/app-icon/materialcraft.ico` and VERSIONINFO
-(ProductName MaterialCraft); `package.ps1` sets `MATERIALCRAFT_REQUIRE_WINRES=1` so a release can't
+(ProductName crocwork Material); `package.ps1` sets `MATERIALCRAFT_REQUIRE_WINRES=1` so a release can't
 ship an exe without them. The version itself is `CARGO_PKG_VERSION`.
 
 Other environment variables the scripts read: `MATERIALCRAFT_VERSION` (override the version),

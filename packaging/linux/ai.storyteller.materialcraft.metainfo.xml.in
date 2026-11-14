@@ -5,14 +5,14 @@
   <id>ai.storyteller.materialcraft</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
-  <name>MaterialCraft</name>
+  <name>crocwork Material</name>
   <summary>Design procedural PBR materials with node graphs</summary>
   <developer id="ai.storyteller">
-    <name>Learning Machines LLC</name>
+    <name>crocwork</name>
   </developer>
   <description>
     <p>
-      MaterialCraft is an open-source, native node-based material designer: build tileable PBR
+      crocwork Material is an open-source, native node-based material designer: build tileable PBR
       materials from noises, patterns and filters in a node graph, preview them live in 2D and 3D,
       and export the texture maps for any engine.
     </p>
@@ -26,10 +26,10 @@
   <launchable type="desktop-id">ai.storyteller.materialcraft.desktop</launchable>
   <icon type="stock">ai.storyteller.materialcraft</icon>
   <!-- Only url types known to appstream 0.15 (Ubuntu 22.04, where CI validates): no vcs-browser. -->
-  <url type="homepage">https://getartcraft.com/apps/materialcraft</url>
-  <url type="bugtracker">https://github.com/storytold/materialcraft/issues</url>
-  <url type="help">https://github.com/storytold/materialcraft</url>
-  <url type="contact">https://discord.gg/artcraft</url>
+  <url type="homepage">https://github.com/CROC101/crocwork-material</url>
+  <url type="bugtracker">https://github.com/CROC101/crocwork-material</url>
+  <url type="help">https://github.com/CROC101/crocwork-material</url>
+  <url type="contact">https://github.com/CROC101/crocwork-material</url>
   <categories>
     <category>Graphics</category>
     <category>3DGraphics</category>

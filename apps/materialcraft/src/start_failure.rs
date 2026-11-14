@@ -2,7 +2,7 @@
 //!
 //! Without a usable GPU, graphics driver or desktop (a broken or very old driver, a remote or
 //! virtual machine, a program started by a service or a test harness), the window's surface
-//! can't be configured and eframe returns an error. MaterialCraft used to log it and exit with no
+//! can't be configured and eframe returns an error. crocwork Material used to log it and exit with no
 //! window, which looks like "the app doesn't open".
 //! winget-pkgs validation starts installed programs without a desktop, so a version that fails
 //! like this never reaches WinGet.
@@ -16,9 +16,9 @@
 /// graphics is named as the likely cause, not the certain one.
 pub(crate) fn message(error: &eframe::Error) -> String {
     match error {
-        eframe::Error::AppCreation(_) => format!("MaterialCraft could not start: {error}"),
+        eframe::Error::AppCreation(_) => format!("crocwork Material could not start: {error}"),
         _ => format!(
-            "MaterialCraft's window could not start or stopped with an error: {error}\n\nIf this keeps happening, updating the graphics driver often fixes it."
+            "crocwork Material's window could not start or stopped with an error: {error}\n\nIf this keeps happening, updating the graphics driver often fixes it."
         ),
     }
 }
@@ -27,7 +27,7 @@ pub(crate) fn message(error: &eframe::Error) -> String {
 pub(crate) fn report(error: &eframe::Error) {
     let message = message(error);
     log::error!("{message}");
-    let _ = rfd::MessageDialog::new().set_title("MaterialCraft").set_description(&message).set_level(rfd::MessageLevel::Error).show();
+    let _ = rfd::MessageDialog::new().set_title("crocwork Material").set_description(&message).set_level(rfd::MessageLevel::Error).show();
 }
 
 #[cfg(test)]
@@ -37,7 +37,7 @@ mod tests {
     #[test]
     fn a_window_or_graphics_error_names_the_driver_as_the_likely_fix() {
         let text = message(&eframe::Error::Wgpu(eframe::egui_wgpu::WgpuError::NoSurfaceFormatsAvailable));
-        assert!(text.starts_with("MaterialCraft's window could not start or stopped"), "{text}");
+        assert!(text.starts_with("crocwork Material's window could not start or stopped"), "{text}");
         assert!(text.contains("no valid format for the surface"), "{text}");
         assert!(text.contains("graphics driver"), "{text}");
     }
@@ -45,7 +45,7 @@ mod tests {
     #[test]
     fn an_app_start_up_error_does_not_blame_the_graphics() {
         let text = message(&eframe::Error::AppCreation("can't write the control file".into()));
-        assert!(text.starts_with("MaterialCraft could not start"), "{text}");
+        assert!(text.starts_with("crocwork Material could not start"), "{text}");
         assert!(text.contains("can't write the control file"), "{text}");
         assert!(!text.contains("graphics"), "{text}");
     }

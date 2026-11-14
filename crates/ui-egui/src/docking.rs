@@ -74,7 +74,7 @@ impl Panel {
     }
 }
 
-/// The saved panel arrangement: craft-ui's workspace over MaterialCraft's panels.
+/// The saved panel arrangement: craft-ui's workspace over crocwork Material's panels.
 pub type Workspace = craft_ui::docking::Workspace<Panel>;
 
 /// The graph never moves, floats, closes or takes tabs; panels dock beside it.

@@ -15,7 +15,7 @@
   timestamp server, ...). Optional overrides: WINDOWS_TIMESTAMP_URL, SIGNTOOL (path to signtool.exe).
 
 .EXAMPLE
-  pwsh packaging/windows/sign.ps1 dist/materialcraft.exe dist/MaterialCraft.msi
+  pwsh packaging/windows/sign.ps1 dist/materialcraft.exe dist/crocwork Material.msi
 #>
 param(
   [Parameter(Mandatory = $true, ValueFromRemainingArguments = $true)]
@@ -55,7 +55,7 @@ if (-not $haveCert -and -not $haveAzure) {
 }
 
 $script:SignTool = Find-SignTool
-$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'MaterialCraft', '/du', 'https://github.com/storytold/materialcraft')
+$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'crocwork Material', '/du', 'https://github.com/CROC101/crocwork-material')
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "materialcraft-sign-$PID"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 

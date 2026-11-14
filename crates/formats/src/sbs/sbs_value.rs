@@ -73,7 +73,7 @@ pub(super) fn to_param_value(like: &Value, value: &SbsValue, options: usize) -> 
         Value::Float2(_) => Value::Float2([f(0), f(1)]),
         Value::Float3(_) => Value::Float3([f(0), f(1), f(2)]),
         Value::Float4(_) => Value::Float4([f(0), f(1), f(2), f(3)]),
-        // SBS colors are stored as displayed (sRGB); MaterialCraft's are linear
+        // SBS colors are stored as displayed (sRGB); crocwork Material's are linear
         Value::Color(_) if value.component_count() >= 3 => {
             let alpha = if value.component_count() >= 4 { f(3) } else { 1.0 };
 

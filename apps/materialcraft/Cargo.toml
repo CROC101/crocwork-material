@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft"
-description = "MaterialCraft: an open-source node-based procedural material designer (desktop app)"
+description = "crocwork Material: an open-source node-based procedural material designer (desktop app)"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

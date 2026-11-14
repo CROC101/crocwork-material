@@ -13,8 +13,8 @@ release: 1
 section: graphics
 priority: optional
 maintainer: ${MATERIALCRAFT_MAINTAINER}
-vendor: Learning Machines LLC
-homepage: https://getartcraft.com/apps/materialcraft
+vendor: crocwork
+homepage: https://github.com/CROC101/crocwork-material
 license: MIT OR Apache-2.0
 description: |-
   Open-source, native node-based procedural material designer. Builds tileable PBR

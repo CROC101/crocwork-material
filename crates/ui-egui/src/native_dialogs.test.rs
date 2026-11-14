@@ -50,7 +50,7 @@ fn archive_save_dialog_keeps_the_mcraft_default() {
 
         let Some(Request::File(dialog)) = asked.first() else { panic!("{asked:?}") };
         assert_eq!(dialog.file_name.as_deref(), Some(format!("{}.mcraft", app.session.pkg.name).as_str()));
-        assert_eq!(dialog.filters.first(), Some(&craft_dialogs::Filter::new("MaterialCraft Project (*.mcraft)", &["mcraft"])));
+        assert_eq!(dialog.filters.first(), Some(&craft_dialogs::Filter::new("crocwork Material Project (*.mcraft)", &["mcraft"])));
     }
 }
 

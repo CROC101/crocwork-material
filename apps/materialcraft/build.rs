@@ -61,12 +61,12 @@ fn today() -> Option<String> {
 
 fn windows_resources() {
     let name = std::env::var("CARGO_PKG_NAME").unwrap_or_else(|_| "materialcraft".into());
-    let description = if name.ends_with("-cli") { "MaterialCraft command-line tool" } else { "MaterialCraft procedural material designer" };
+    let description = if name.ends_with("-cli") { "crocwork Material command-line tool" } else { "crocwork Material procedural material designer" };
     let mut res = winresource::WindowsResource::new();
     res.set_icon(ICON)
-        .set("ProductName", "MaterialCraft")
+        .set("ProductName", "crocwork Material")
         .set("FileDescription", description)
-        .set("CompanyName", "Learning Machines LLC")
+        .set("CompanyName", "crocwork")
         .set("LegalCopyright", "Copyright (c) the MaterialCraft contributors. MIT OR Apache-2.0.")
         .set("OriginalFilename", &format!("{name}.exe"))
         .set("InternalName", &name);

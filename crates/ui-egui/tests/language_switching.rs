@@ -14,7 +14,7 @@ fn language_switching_and_arabic_translations_work() {
     assert_eq!(tr("Preferences"), "التفضيلات");
     assert_eq!(tr("New graph"), "مخطط جديد");
     assert_eq!(tr("Export outputs"), "تصدير المخرجات");
-    assert_eq!(tr("Welcome to MaterialCraft"), "مرحباً بك في MaterialCraft");
+    assert_eq!(tr("Welcome to crocwork Material"), "مرحباً بك في crocwork Material");
     assert!(is_rtl());
 
     // The update menu item and dialogs use the same catalog
@@ -23,7 +23,7 @@ fn language_switching_and_arabic_translations_work() {
     {
         use materialcraft_ui_egui::updates_ui::translate;
         assert_eq!(translate("Cancel", &[]), "إلغاء");
-        assert_eq!(translate("{app} update", &[("app", "MaterialCraft")]), "MaterialCraft update");
+        assert_eq!(translate("{app} update", &[("app", "crocwork Material")]), "crocwork Material update");
     }
 
     // Live formatting

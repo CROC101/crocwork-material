@@ -1,8 +1,8 @@
 /// One node placed in a layout frame
 #[derive(Clone, Debug, PartialEq)]
 pub enum LayoutItem {
-    /// An atomic SBS filter by its SBS name, with the MaterialCraft node it reads as (`None`
-    /// when MaterialCraft has no counterpart yet)
+    /// An atomic SBS filter by its SBS name, with the crocwork Material node it reads as (`None`
+    /// when crocwork Material has no counterpart yet)
     Atomic { filter: String, node: Option<&'static str> },
     /// A graph input (`input_color`, `input_grayscale`, `input_value`) or `output`
     Node(&'static str),

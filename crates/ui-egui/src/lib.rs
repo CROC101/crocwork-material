@@ -50,9 +50,12 @@ mod window_controls;
 /// update prompt shows
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {
+    name: "crocwork Material",
+    repo: "CROC101/crocwork-material",
+    developer: "crocwork",
     icon_png: Some(include_bytes!("../../../assets/app-icon/hicolor/128x128/apps/ai.storyteller.materialcraft.png")),
     accent: Some([0x17, 0x8a, 0x9c]),
-    ..craft_update::app::App::new("materialcraft", "MaterialCraft", "Procedural material design", "storytold/materialcraft")
+    ..craft_update::app::App::new("materialcraft", "crocwork Material", "Procedural material design", "storytold/materialcraft")
 };
 
 pub use control::ControlRequest;

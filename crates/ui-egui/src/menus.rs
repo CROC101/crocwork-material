@@ -31,7 +31,7 @@ pub(crate) const EXPLORER_RESOURCE: &[(&str, &str)] = &[("Add to graph", "graph.
 pub(crate) use crate::explorer::explorer_row::ExplorerRow;
 use ExplorerRow::{Item, Separator, Sub};
 
-/// Linking keeps a resource outside the package; MaterialCraft only embeds resources so far
+/// Linking keeps a resource outside the package; crocwork Material only embeds resources so far
 pub(crate) const EXPLORER_LINK: &[(&str, &str)] = &[("Bitmap", ""), ("Vector graphics", "")];
 pub(crate) const EXPLORER_SEND_TO: &[(&str, &str)] = &[("TextureCraft", "file.sendToTextureCraft")];
 /// Explorer actions that wrap engine commands or the operating system: computing every output,
@@ -147,12 +147,12 @@ pub const CATALOG: &[MenuItem] = &[
     it("Help", "Shortcuts list...", "ui.help.shortcuts", None),
     sep("Help"),
     it("Help", "Join the community (Discord)...", "ui.help.discord", None),
-    it("Help", "ArtCraft website...", "ui.help.website", None),
+    it("Help", "crocwork website...", "ui.help.website", None),
     it("Help", "Report a bug...", "ui.help.bug", None),
     sep("Help"),
     #[cfg(not(target_arch = "wasm32"))]
     it("Help", "Check for updates...", "ui.help.checkForUpdates", None),
-    it("Help", "About MaterialCraft...", "ui.about", None),
+    it("Help", "About crocwork Material...", "ui.about", None),
 ];
 
 fn is_ui(id: &str) -> bool {
@@ -237,10 +237,10 @@ pub fn invoke(app: &mut MaterialCraftApp, ctx: &egui::Context, id: &str) {
         "ui.about" => app.ui.windows.about = true,
         #[cfg(not(target_arch = "wasm32"))]
         "ui.help.checkForUpdates" => crate::updates_ui::check(app),
-        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://discord.gg/artcraft")),
-        "ui.help.website" => ctx.open_url(egui::OpenUrl::new_tab("https://getartcraft.com/apps/materialcraft")),
-        "ui.help.docs" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/storytold/materialcraft#readme")),
-        "ui.help.bug" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/storytold/materialcraft/issues")),
+        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
+        "ui.help.website" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
+        "ui.help.docs" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material#readme")),
+        "ui.help.bug" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
         _ => {
             if crate::windows::file_action(app, ctx, id) {
                 return;

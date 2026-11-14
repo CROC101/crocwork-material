@@ -1,4 +1,4 @@
-//! SBS XML and its adjacent resources, either as files or a MaterialCraft ZIP.
+//! SBS XML and its adjacent resources, either as files or a crocwork Material ZIP.
 //! Both representations use the same clean-room SBS reader and writer.
 
 mod project_files;
@@ -101,7 +101,7 @@ pub fn read(bytes: &[u8], identity: &str) -> Result<sbs::SbsRead> {
     }
     let roots: Vec<_> = files.keys().filter(|name| !name.contains('/') && name.to_ascii_lowercase().ends_with(".sbs")).cloned().collect();
     if roots.len() != 1 {
-        return Err(bad("A MaterialCraft archive must contain exactly one SBS file at its root"));
+        return Err(bad("A crocwork Material archive must contain exactly one SBS file at its root"));
     }
 
     let root = roots.first().ok_or_else(|| bad("Missing SBS entry"))?.clone();

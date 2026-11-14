@@ -14,7 +14,7 @@ fn frame_titles_map_to_library_categories() {
     assert_eq!(frame_category("PBR Materials", false, false).as_deref(), Some("PBR materials"));
     assert_eq!(frame_category("Atomic Nodes", false, false).as_deref(), Some("Atomic nodes"));
 
-    // The category MaterialCraft renamed still reads from older layouts
+    // The category crocwork Material renamed still reads from older layouts
     assert_eq!(frame_category("SDF functions - Primitives", false, false).as_deref(), Some("MCF functions/Primitives"));
     assert_eq!(frame_category("Functions Inside", false, false), None);
     assert_eq!(frame_category("Filters - Nowhere", false, false), None);
@@ -96,7 +96,7 @@ fn the_bundled_library_fills_the_tree_with_what_materialcraft_has() {
     assert_eq!(find("sbs://functions.sbs#Functions/Math/Equality_Float2").category, "Functions/Comparison");
 }
 
-/// A layout that places a library node MaterialCraft doesn't have yet, a function and a sub-category
+/// A layout that places a library node crocwork Material doesn't have yet, a function and a sub-category
 /// the PBR keywords decide
 const LAYOUT: &str = r#"<package><dependencies>
     <dependency><filename v="sbs://3d_perlin_noise.sbs"/><uid v="2"/></dependency>

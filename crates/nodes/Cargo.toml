@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft-nodes"
-description = "MaterialCraft node library: definitions and CPU implementations of every node"
+description = "crocwork Material node library: definitions and CPU implementations of every node"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

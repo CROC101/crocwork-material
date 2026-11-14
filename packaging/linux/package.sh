@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build and package MaterialCraft for Linux (x86_64, aarch64 or cross-compiled riscv64):
+# Build and package crocwork Material for Linux (x86_64, aarch64 or cross-compiled riscv64):
 #
 #   $DIST/materialcraft-<version>-linux-<arch>.AppImage  any distro with glibc >= the build host's
 #   $DIST/materialcraft-<version>-linux-<arch>.AppImage.zsync  delta updates (needs zsyncmake)
@@ -37,10 +37,10 @@ case "$ARCH" in
   aarch64 | arm64) ARCH=aarch64; DEB_ARCH=arm64 ;;
   *) echo "unsupported architecture $ARCH" >&2; exit 2 ;;
 esac
-export MATERIALCRAFT_MAINTAINER="${MATERIALCRAFT_MAINTAINER:-MaterialCraft maintainers <materialcraft@storyteller.ai>}"
+export MATERIALCRAFT_MAINTAINER="${MATERIALCRAFT_MAINTAINER:-crocwork Material maintainers <materialcraft@storyteller.ai>}"
 BASENAME="materialcraft-$VERSION-linux-$ARCH"
 
-echo "==> MaterialCraft $VERSION for Linux $ARCH ($FORMATS)"
+echo "==> crocwork Material $VERSION for Linux $ARCH ($FORMATS)"
 
 if [[ "$SKIP_BUILD" = 0 ]]; then
   (cd "$ROOT" && cargo build --release --locked -p materialcraft -p materialcraft-cli ${CROSS_TARGET:+--target "$CROSS_TARGET"})
@@ -97,7 +97,7 @@ fi
 
 # ---- AppImage -----------------------------------------------------------------------------------
 if has appimage; then
-  APPDIR="$WORK/MaterialCraft.AppDir"
+  APPDIR="$WORK/crocwork Material.AppDir"
   cp -R "$STAGE" "$APPDIR"
   mv "$APPDIR/usr/share/doc" "$WORK/doc-unused"
   # AppRun is a script, not a symlink: it installs the .desktop entry and icons into

@@ -20,7 +20,7 @@ pub struct UiState {
     pub library_favorites: Vec<String>,
     /// Expanded library categories
     pub library_expanded: std::collections::BTreeSet<String>,
-    /// Library filters: entries MaterialCraft doesn't have yet, and entries for other graph types
+    /// Library filters: entries crocwork Material doesn't have yet, and entries for other graph types
     pub library_show_missing: bool,
     pub library_show_other: bool,
     /// The library entry last clicked

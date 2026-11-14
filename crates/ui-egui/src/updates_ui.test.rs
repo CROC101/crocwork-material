@@ -42,8 +42,8 @@ fn release() -> craft_update::Release {
     craft_update::Release {
         tag: "v99.0.0".into(),
         version: craft_update::parse_version("99.0.0"),
-        name: "MaterialCraft 99.0.0".into(),
-        html_url: "https://github.com/storytold/materialcraft/releases/tag/v99.0.0".into(),
+        name: "crocwork Material 99.0.0".into(),
+        html_url: "https://github.com/CROC101/crocwork-material/releases/tag/v99.0.0".into(),
         ..Default::default()
     }
 }
@@ -56,7 +56,7 @@ pub(super) fn open_prompt(app: &mut MaterialCraftApp) {
 #[test]
 fn the_update_app_names_this_repository() {
     assert_eq!(crate::UPDATE_APP.id, "materialcraft");
-    assert_eq!(crate::UPDATE_APP.name, "MaterialCraft");
+    assert_eq!(crate::UPDATE_APP.name, "crocwork Material");
     assert_eq!(crate::UPDATE_APP.repo, "storytold/materialcraft");
     assert_eq!(crate::UPDATE_APP.bundle_id(), "ai.storyteller.materialcraft");
     assert!(crate::UPDATE_APP.icon_png.is_some());

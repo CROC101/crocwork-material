@@ -1,6 +1,6 @@
 [package]
 name = "materialcraft-geom"
-description = "MaterialCraft geometry: meshes, primitives, tangents, BVH ray casts, UV G-buffer, camera"
+description = "crocwork Material geometry: meshes, primitives, tangents, BVH ray casts, UV G-buffer, camera"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

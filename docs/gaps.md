@@ -19,12 +19,12 @@ package, folder and graph context menus follow the reference layout: creation, i
 export material, send to TextureCraft, copy/paste, close, compute outputs, show in folder, open
 dependencies, view outputs in 3D view and export outputs. Enter, F2 and Delete act on the Explorer
 selection while the pointer is over it. Linking resources, exporting with dependencies and the
-dependency manager are listed but disabled until MaterialCraft has them; copy and paste have no
+dependency manager are listed but disabled until crocwork Material has them; copy and paste have no
 Explorer shortcut yet.
 
 The Library panel shows the reference category tree (Favorites, Graph items, Atomic nodes, FxMap
 nodes, Function nodes, Texture generators, Filters, Material filters, Mesh-based generators, Spline &
-Path tools, MCF functions, Functions, 3D view, PBR materials, Values). It lists what MaterialCraft
+Path tools, MCF functions, Functions, 3D view, PBR materials, Values). It lists what crocwork Material
 has: the atomic nodes, the function operations, the 171 bundled functions (sorted into the Functions
 sub-categories) and the FX-Map nodes. Texture generators, Filters, Material filters, Mesh-based
 generators, Spline & Path tools, MCF functions, 3D view, PBR materials and Values stay empty until
