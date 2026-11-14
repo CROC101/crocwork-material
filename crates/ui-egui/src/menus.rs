@@ -237,7 +237,7 @@ pub fn invoke(app: &mut MaterialCraftApp, ctx: &egui::Context, id: &str) {
         "ui.about" => app.ui.windows.about = true,
         #[cfg(not(target_arch = "wasm32"))]
         "ui.help.checkForUpdates" => crate::updates_ui::check(app),
-        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
+        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://discord.gg/sNYsVbh3v")),
         "ui.help.website" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
         "ui.help.docs" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material#readme")),
         "ui.help.bug" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-material")),
