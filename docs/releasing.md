@@ -120,7 +120,7 @@ scripts smoke-test `materialcraft-cli --version`, and the Linux job also runs th
 | Bundle / app id | `ai.storyteller.materialcraft` |
 | Package format | `.mcraft`, MIME `application/x-materialcraft`, UTI `ai.storyteller.materialcraft.package` (owned). Declared in `materialcraft.wxs`, `Info.plist.in`, the `.desktop` file, `mime.xml` and the AppStream metainfo: keep all five in step |
 | WiX UpgradeCode | `89DE105E-B6C8-4261-ADBE-25BCFA3A0C91`, never change it |
-| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.crocwork Material.yml` (release bundle: `…crocwork Material.bundle.yml`) |
+| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.MaterialCraft.yml` (release bundle: `…MaterialCraft.bundle.yml`) |
 | macOS minimum | 11.0 (`LSMinimumSystemVersion`, `MACOSX_DEPLOYMENT_TARGET`) |
 
 ## Version and build info in the binaries

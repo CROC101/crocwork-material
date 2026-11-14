@@ -4,7 +4,7 @@
 
     wix build materialcraft.wxs -arch x64 -d Version=1.2.3 -d BinDir=... -d IconPath=... -o out.msi
 
-  Per-machine install into Program Files, a Start Menu shortcut, `.mcraft` owned by crocwork Material,
+  Per-machine install into Program Files, a Start Menu shortcut, `.mcraft` owned by MaterialCraft,
   and crocwork Material offered under "Open with" for the mesh formats it opens (without taking over
   the user's default app for them).
 
@@ -55,7 +55,7 @@
         </File>
 
         <!-- .mcraft: crocwork Material's own package format; crocwork Material is its default app. -->
-        <ProgId Id="crocwork Material.Package" Description="crocwork Material Package" Icon="MaterialCraftExe" IconIndex="0">
+        <ProgId Id="MaterialCraft.Package" Description="crocwork Material Package" Icon="MaterialCraftExe" IconIndex="0">
           <Extension Id="mcraft" ContentType="application/x-materialcraft">
             <Verb Id="open" Command="Open" TargetFile="MaterialCraftExe" Argument="&quot;%1&quot;" />
           </Extension>
