@@ -227,8 +227,8 @@ fn about(app: &mut MaterialCraftApp, ctx: &egui::Context) {
             ui.label(tr("Node-based procedural materials, built in pure Rust."));
             ui.label(tr("An open-source Crafting App by the crocwork team and community."));
             ui.add_space(6.0);
-            ui.hyperlink_to("getartcraft.com/apps/materialcraft", "https://github.com/CROC101/crocwork-material");
-            ui.hyperlink_to("discord.gg/artcraft", "https://github.com/CROC101/crocwork-material");
+            ui.hyperlink_to("github.com/CROC101/crocwork-material", "https://github.com/CROC101/crocwork-material");
+            ui.hyperlink_to("github.com/CROC101/crocwork-material", "https://github.com/CROC101/crocwork-material");
             ui.add_space(6.0);
             ui.label(RichText::new("MIT OR Apache-2.0").size(11.0).color(tk.text_dim));
         });
@@ -293,7 +293,7 @@ fn home(app: &mut MaterialCraftApp, ctx: &egui::Context) {
                 ui.add_space(16.0);
                 ui.hyperlink_to(tr("Documentation"), "https://github.com/CROC101/crocwork-material#readme");
                 ui.hyperlink_to(tr("Community (Discord)"), "https://github.com/CROC101/crocwork-material");
-                ui.hyperlink_to("getartcraft.com", "https://github.com/CROC101/crocwork-material");
+                ui.hyperlink_to("github.com/CROC101/crocwork-material", "https://github.com/CROC101/crocwork-material");
                 ui.add_space(16.0);
                 ui.checkbox(&mut app.ui.prefs.show_home, tr("Show at startup"));
             });
